@@ -202,7 +202,8 @@ public class sendMoney extends JFrame {
 			    		   if(rs.getString("AccountNumber").equals(accountnum))
 			    		   {
 			    			   
-			    			   JOptionPane.showMessageDialog(null, "You can't enter your own accountnumber","WARNING",JOptionPane.WARNING_MESSAGE);
+			    			   JOptionPane.showMessageDialog(null, "INVALID ACCOUNT NUMBER","WARNING",JOptionPane.WARNING_MESSAGE);
+			    			   new sendMoney().dispose();
 			    			   
 			    			   
 			    			   

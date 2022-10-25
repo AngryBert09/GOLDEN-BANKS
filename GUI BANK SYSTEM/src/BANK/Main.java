@@ -97,13 +97,13 @@ public class Main extends JFrame {
 		getContentPane().setLayout(null);
 		
 	    accountLabel = new JLabel("ACCOUNT #:");
-		accountLabel.setFont(new Font("Agency FB", Font.PLAIN, 15));
+		accountLabel.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		accountLabel.setForeground(Color.WHITE);
 		accountLabel.setBounds(130, 61, 88, 32);
 		getContentPane().add(accountLabel);
 		
 	    pinLabel = new JLabel("PIN #:");
-		pinLabel.setFont(new Font("Agency FB", Font.PLAIN, 15));
+		pinLabel.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		pinLabel.setForeground(Color.WHITE);
 		pinLabel.setBounds(130, 104, 54, 32);
 		getContentPane().add(pinLabel);

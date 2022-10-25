@@ -95,14 +95,14 @@ public class Homepage {
 	    accsettingsButt = new JButton("Account Settings");
 	    accsettingsButt.setFocusPainted(false);
 	    accsettingsButt.setIconTextGap(6);
-	    accsettingsButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-settings-25.png"));
+	    accsettingsButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-settings-28.png"));
 		accsettingsButt.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				accsettingsButt.setContentAreaFilled(true);
 				accsettingsButt.setBackground(Color.white);
 				accsettingsButt.setForeground(Color.black);
-				accsettingsButt.setIcon(new ImageIcon("E:\\Downloads\\settingsblack.png"));
+				accsettingsButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\settingsblack.png"));
 				accsettingsButt.setText("");
 				
 				
@@ -111,7 +111,7 @@ public class Homepage {
 			public void mouseExited(MouseEvent e) {
 				accsettingsButt.setContentAreaFilled(false);
 				accsettingsButt.setForeground(Color.white);
-				accsettingsButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-settings-25.png"));
+				accsettingsButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-settings-28.png"));
 				accsettingsButt.setText("Account Settings");
 			}
 		});
@@ -145,21 +145,21 @@ public class Homepage {
 	    sendmoneyButt.setFocusPainted(false);
 	    sendmoneyButt.setBackground(Color.WHITE);
 	    sendmoneyButt.setIconTextGap(7);
-	    sendmoneyButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-money-transfer-25.png"));
+	    sendmoneyButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-money-transfer-25.png"));
 		sendmoneyButt.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				sendmoneyButt.setContentAreaFilled(true);
 				sendmoneyButt.setBackground(Color.WHITE);
 				sendmoneyButt.setForeground(Color.BLACK);
-			    sendmoneyButt.setIcon(new ImageIcon("E:\\Downloads\\sendmoneyblack.png"));
+			    sendmoneyButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\sendmoneyblack.png"));
 			    sendmoneyButt.setText("");
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				sendmoneyButt.setContentAreaFilled(false);
 			    sendmoneyButt.setForeground(Color.white);
-			    sendmoneyButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-money-transfer-25.png"));
+			    sendmoneyButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-money-transfer-25.png"));
 			    sendmoneyButt.setText("Send Money");
 			}
 		
@@ -199,21 +199,21 @@ public class Homepage {
 		
 	    transactHistoryButt = new JButton("Transaction History");
 	    transactHistoryButt.setFocusPainted(false);
-	    transactHistoryButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-scroll-25.png"));
+	    transactHistoryButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-scroll-25.png"));
 		transactHistoryButt.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				 transactHistoryButt.setContentAreaFilled(true);
 				 transactHistoryButt.setForeground(Color.black);
 				 transactHistoryButt.setBackground(Color.white);
-				 transactHistoryButt.setIcon(new ImageIcon("E:\\Downloads\\historyblack.png"));
+				 transactHistoryButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\historyblack.png"));
 				 transactHistoryButt.setText(null);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				transactHistoryButt.setContentAreaFilled(false);
 				transactHistoryButt.setForeground(Color.white);
-			    transactHistoryButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-scroll-25.png"));
+			    transactHistoryButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-scroll-25.png"));
 			    transactHistoryButt.setText("Transaction History");
 			}
 		});
@@ -235,14 +235,14 @@ public class Homepage {
 		
 	    cashinButt = new JButton("Cash In");
 	    cashinButt.setFocusPainted(false);
-	    cashinButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-cash-in-hand-25.png"));
+	    cashinButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\Cashin (2).png"));
 		cashinButt.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 		     cashinButt.setContentAreaFilled(true);
 		     cashinButt.setBackground(Color.white);
 		     cashinButt.setForeground(Color.black);
-		     cashinButt.setIcon(new ImageIcon("E:\\Downloads\\cashinblack.png"));
+		     cashinButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\cashinblack.png"));
 		     cashinButt.setText("");
 				
 			}
@@ -250,7 +250,7 @@ public class Homepage {
 			public void mouseExited(MouseEvent e) {
 				cashinButt.setContentAreaFilled(false);
 				cashinButt.setForeground(Color.white);
-			   cashinButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-cash-in-hand-25.png"));
+			   cashinButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\Cashin (2).png"));
 				cashinButt.setText("Cash In");
 			}
 		});

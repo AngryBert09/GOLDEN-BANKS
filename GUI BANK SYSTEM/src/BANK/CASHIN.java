@@ -105,7 +105,7 @@ public class CASHIN extends JFrame {
 				
 			}
 		});
-		partner1.setIcon(new ImageIcon("E:\\Downloads\\icons8-gcash-45.png"));
+		partner1.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-gcash-45.png"));
 		partner1.setBackground(new Color(255, 250, 250));
 		partner1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(255, 255, 255)));
 		partner1.setBounds(69, 98, 94, 66);

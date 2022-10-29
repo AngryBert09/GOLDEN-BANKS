@@ -144,7 +144,7 @@ public class INTROLOADER extends JFrame {
 		    
 		contentPane.add(LOADER);
 		
-		lblNewLabel = new JLabel("BETA version 1.0.0.0");
+		lblNewLabel = new JLabel("BETA version 1.0.0.1");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		lblNewLabel.setBounds(10, 11, 202, 24);

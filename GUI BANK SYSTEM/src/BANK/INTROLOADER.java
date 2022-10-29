@@ -124,7 +124,7 @@ public class INTROLOADER extends JFrame {
 		                case 100:
 		                    Main main = new Main();
 		                    main.setLocationRelativeTo(null);
-		                    main.setVisible(true);
+		                    main.setVisible(true);  
 		                    dispose();
 		                }
 		                

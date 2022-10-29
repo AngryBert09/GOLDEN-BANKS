@@ -169,12 +169,12 @@ public class sendMoney extends JFrame {
 	    		
 	    		try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-				    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
+				    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 			        String accountnum = accountTextfield.getText();
 			        String amount  = amountTextfield.getText();
 			        
-			        String send = "update infosbs set balance = ( balance + ? ) where AccountNumber=?";
-			        String sql = "select * from infosbs where AccountNumber='"+ownaccountnum+"'";
+			        String send = "update userinfos set balance = ( balance + ? ) where AccountNumber=?";
+			        String sql = "select * from userinfos where AccountNumber='"+ownaccountnum+"'";
 			        PreparedStatement ps = con.prepareStatement(send);
 			        state = con.createStatement();
 			        rs = state.executeQuery(sql);
@@ -193,25 +193,34 @@ public class sendMoney extends JFrame {
 			    			   
 			    		   
 	  
-			    	   }else {
+			    	   } else {
 			    		   
 			    		   /* check if the input account number
 			    		    * are the same with the own account number
 			    		    */
 			    		   
-			    		   if(rs.getString("AccountNumber").equals(accountnum))
+			    		   if(ownaccountnum.equals(accountnum))
 			    		   {
 			    			   
 			    			   JOptionPane.showMessageDialog(null, "INVALID ACCOUNT NUMBER","WARNING",JOptionPane.WARNING_MESSAGE);
+			    			   getFrame().dispose();
 			    			   new sendMoney().dispose();
 			    			   
 			    			   
 			    			   
 			    		   }else if(accountnum != rs.getString("AccountNumber")) {
 			    			   
-			    			   // Check if the input accountnumber is valid
+			    			   // Check if the input account number is valid
+			    				int count = 0;
+				    			count++;
+				    			
+				    			if(count > 1) {
+				    				getFrame().dispose();
+				    			}
 			    			   
 			    			JOptionPane.showMessageDialog(null, "INVALID ACCOUNTNUMBER");
+			    		
+			    		   
 			    
 			    		   }else {
 			    		   
@@ -221,7 +230,7 @@ public class sendMoney extends JFrame {
 			    		   ps.executeUpdate();
 			    		   
 			    		   // THEN THE PROGRAM WILL DEDUCT THE AMOUNT TO THE BALANCE
-			    		   PreparedStatement pes = con.prepareStatement("Update infosbs set balance= (balance - ?) where AccountNumber='"+ownaccountnum+"'");
+			    		   PreparedStatement pes = con.prepareStatement("Update userinfos set balance= (balance - ?) where AccountNumber='"+ownaccountnum+"'");
 			    		   pes.setString(1, amount);
 			    		   pes.executeUpdate();
 			    		   
@@ -231,6 +240,7 @@ public class sendMoney extends JFrame {
 			    		   rs.close();
 			    		   
 			    	      JOptionPane.showMessageDialog(null, "SEND SUCCESSFULLY");
+			    	      new sendMoney().dispose();
 			    	    
 
 			    		   } }}else {
@@ -263,12 +273,12 @@ public class sendMoney extends JFrame {
 			public void mouseEntered(MouseEvent e) {
 				sendMoney.setContentAreaFilled(true);
 				sendMoney.setText("");
-				sendMoney.setIcon(new ImageIcon("E:\\Downloads\\blacksent.png"));
+				sendMoney.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\blacksent.png"));
 				sendMoney.setBackground(Color.white);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				sendMoney.setIcon(new ImageIcon("E:\\Downloads\\icons8-email-send-26.png"));
+				sendMoney.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\sendmoney.png"));
 				sendMoney.setContentAreaFilled(false);
 				sendMoney.setText("SEND");
 			}
@@ -278,9 +288,9 @@ public class sendMoney extends JFrame {
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
 				
-			    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
+			    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 			    state = con.createStatement();
-			    rs = state.executeQuery("Select * from infosbs where AccountNumber='"+ownaccountnum+"'");
+			    rs = state.executeQuery("Select * from userinfos where AccountNumber='"+ownaccountnum+"'");
 				home.setAccountnum(ownaccountnum);
 			    
 				
@@ -306,7 +316,7 @@ public class sendMoney extends JFrame {
 			 }
 			}});
 		sendMoney.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		sendMoney.setIcon(new ImageIcon("E:\\Downloads\\icons8-email-send-26.png"));
+		sendMoney.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\sendmoney.png"));
 		sendMoney.setForeground(Color.WHITE);
 		sendMoney.setContentAreaFilled(false);
 		sendMoney.setFocusPainted(false);

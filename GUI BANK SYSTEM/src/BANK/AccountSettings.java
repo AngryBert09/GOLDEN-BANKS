@@ -257,20 +257,21 @@ public class AccountSettings extends JFrame {
 	    		logoutButt.setContentAreaFilled(true);
 	    		logoutButt.setBackground(Color.white);
 	    		logoutButt.setForeground(Color.black);
-	    	    logoutButt.setIcon(new ImageIcon("E:\\Downloads\\blacklogout.png"));
+	    		logoutButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\blacklogout.png"));
 	    		
 	    	}
 	    	@Override
 	    	public void mouseExited(MouseEvent e) {
 	    		logoutButt.setContentAreaFilled(false);
 	    		logoutButt.setForeground(Color.white);
-	    	    logoutButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-logout-20.png"));
+	    		logoutButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-logout-20.png"));
+	    		
 	    		
 	    		
 	    		
 	    	}
 	    });
-	    logoutButt.setIcon(new ImageIcon("E:\\Downloads\\icons8-logout-20.png"));
+	    logoutButt.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-logout-20.png"));
 	    logoutButt.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent e) {
 	    		
@@ -313,8 +314,8 @@ public class AccountSettings extends JFrame {
 				
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
-					PreparedStatement ps = con.prepareStatement("update infosbs SET Pin=? where AccountNumber=?");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
+					PreparedStatement ps = con.prepareStatement("update userinfos SET Pin=? where AccountNumber=?");
 					Statement state = con.createStatement();
 					
 					  String oldpin = oldpinPassfield.getText();
@@ -323,7 +324,7 @@ public class AccountSettings extends JFrame {
 				  
 				
 				     
-					ResultSet rs = state.executeQuery("select * from infosbs where AccountNumber='"+ownaccountnum+"' and Pin='"+oldpin+"'");
+					ResultSet rs = state.executeQuery("select * from userinfos where AccountNumber='"+ownaccountnum+"' and Pin='"+oldpin+"'");
 				
 				
 				     

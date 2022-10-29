@@ -275,12 +275,12 @@ public class ResetInfo extends JFrame {
 				//ESTABLISHING CONNECTION TO THE SQL DATABASE
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 					 
 			        String newpin = newpinField.getText();
 			        String confirmpin = confirmpinField.getText();
 				    
-				    String sql = "UPDATE infosbs SET Pin=? where AccountNumber=?";
+				    String sql = "UPDATE userinfos SET Pin=? where AccountNumber=?";
 				    PreparedStatement ps = con.prepareStatement(sql);
 				    
 				    // THE PROGRAM WILL REVIEW IF THE NEWPIN AND CONFIRMPIN ARE SAME 

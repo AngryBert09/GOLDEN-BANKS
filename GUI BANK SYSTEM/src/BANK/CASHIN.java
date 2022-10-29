@@ -76,7 +76,7 @@ public class CASHIN extends JFrame {
 			public void mouseEntered(MouseEvent e) {
 				partner1.setContentAreaFilled(true);
 				partner1.setBackground(Color.white);
-				partner1.setIcon(new ImageIcon("E:\\Downloads\\icons8-gcash-45.png"));
+				partner1.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-gcash-45.png"));
 				partner1.setText("");
 				
 				
@@ -123,7 +123,7 @@ public class CASHIN extends JFrame {
 			public void mouseEntered(MouseEvent e) {
 				partner2.setContentAreaFilled(true);
 				partner2.setBackground(Color.white);
-				partner2.setIcon(new ImageIcon("E:\\Downloads\\icons8-7-eleven-is-your-go-to-convenience-store-for-food,-snacks,-hot-and-cold-beverages-34.png"));
+				partner2.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-7-eleven-is-your-go-to-convenience-store-for-food,-snacks,-hot-and-cold-beverages-34.png"));
 				partner2.setText("");
 				
 			}
@@ -141,7 +141,7 @@ public class CASHIN extends JFrame {
 		partner2.setFont(new Font("SansSerif", Font.PLAIN, 14));
 		partner2.setHorizontalTextPosition(SwingConstants.CENTER);
 		partner2.setVerticalTextPosition(SwingConstants.BOTTOM);
-		partner2.setIcon(new ImageIcon("E:\\Downloads\\icons8-7-eleven-is-your-go-to-convenience-store-for-food,-snacks,-hot-and-cold-beverages-34.png"));
+		partner2.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-7-eleven-is-your-go-to-convenience-store-for-food,-snacks,-hot-and-cold-beverages-34.png"));
 		partner2.setContentAreaFilled(false);
 		partner2.setBorder(new MatteBorder(1, 1, 1, 1, (Color) Color.WHITE));
 		partner2.setBounds(173, 98, 94, 66);
@@ -160,7 +160,7 @@ public class CASHIN extends JFrame {
 				partner3.setContentAreaFilled(true);
 				partner3.setText("");
 				partner3.setBackground(Color.white);
-				partner3.setIcon(new ImageIcon("E:\\Downloads\\icons8-paypal-42.png"));
+				partner3.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-paypal-42.png"));
 				
 				
 			}
@@ -175,7 +175,7 @@ public class CASHIN extends JFrame {
 		partner3.setIconTextGap(1);
 		partner3.setHorizontalTextPosition(SwingConstants.CENTER);
 		partner3.setVerticalTextPosition(SwingConstants.BOTTOM);
-		partner3.setIcon(new ImageIcon("E:\\Downloads\\icons8-paypal-42.png"));
+		partner3.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-paypal-42.png"));
 		partner3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		partner3.setForeground(Color.WHITE);
 		partner3.setFont(new Font("SansSerif", Font.PLAIN, 14));
@@ -199,7 +199,7 @@ public class CASHIN extends JFrame {
 				partner4.setContentAreaFilled(true);
 				partner4.setText("");
 				partner4.setBackground(Color.white);
-				partner4.setIcon(new ImageIcon("E:\\Downloads\\icons8-amazon-42.png"));
+				partner4.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-amazon-42.png"));
 				
 			}
 			@Override
@@ -209,7 +209,7 @@ public class CASHIN extends JFrame {
 				
 			}
 		});
-		partner4.setIcon(new ImageIcon("E:\\Downloads\\icons8-amazon-42.png"));
+		partner4.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-amazon-42.png"));
 		partner4.setHorizontalTextPosition(SwingConstants.CENTER);
 		partner4.setVerticalTextPosition(SwingConstants.BOTTOM);
 		partner4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -235,7 +235,7 @@ public class CASHIN extends JFrame {
 				partner5.setContentAreaFilled(true);
 				partner5.setText("");
 				partner5.setBackground(Color.white);
-				partner5.setIcon(new ImageIcon("E:\\Downloads\\icons8-citibank-42.png"));
+				partner5.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-citibank-42.png"));
 				
 			}
 			@Override
@@ -248,7 +248,7 @@ public class CASHIN extends JFrame {
 		});
 		partner5.setHorizontalTextPosition(SwingConstants.CENTER);
 		partner5.setVerticalTextPosition(SwingConstants.BOTTOM);
-		partner5.setIcon(new ImageIcon("E:\\Downloads\\icons8-citibank-42.png"));
+		partner5.setIcon(new ImageIcon("D:\\Github Repositories\\PERSONAL-DEVS\\Icons\\Icons\\icons8-citibank-42.png"));
 		partner5.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		partner5.setForeground(Color.WHITE);
 		partner5.setFont(new Font("SansSerif", Font.PLAIN, 14));
@@ -347,8 +347,8 @@ public class CASHIN extends JFrame {
 	    		
 	    		try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
-					PreparedStatement ps = con.prepareStatement("update infosbs set balance = (balance + ?) where AccountNumber=?");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
+					PreparedStatement ps = con.prepareStatement("update userinfos set balance = (balance + ?) where AccountNumber=?");
 				
 					
 					String insert = amountTextfield.getText();
@@ -411,9 +411,9 @@ public class CASHIN extends JFrame {
 	    		
 	    		try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 					Statement state = con.createStatement();
-					ResultSet rs = state.executeQuery("select * from infosbs where AccountNumber='"+ownaccountnum+"'");
+					ResultSet rs = state.executeQuery("select * from userinfos where AccountNumber='"+ownaccountnum+"'");
 					
 					rs.next();
 					

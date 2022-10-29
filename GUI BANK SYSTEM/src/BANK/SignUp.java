@@ -338,8 +338,8 @@ public class SignUp {
 		
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
-					String query = "insert into infosbs values(?,?,?,?,?,?,?,?,?,?,?)";
+					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
+					String query = "insert into userinfos values(?,?,?,?,?,?,?,?,?,?,?)";
 					PreparedStatement ps = con.prepareStatement(query);
 					
 					//CHECK IF TEXTFIELD ARE EMPTY 

@@ -77,9 +77,8 @@ public class Verifier extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel AccountLabel = new JLabel("Account # :");
-		AccountLabel.setEnabled(false);
 		AccountLabel.setForeground(Color.WHITE);
-		AccountLabel.setFont(new Font("Agency FB", Font.PLAIN, 17));
+		AccountLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
 		AccountLabel.setBounds(131, 81, 109, 14);
 		contentPane.add(AccountLabel);
 		
@@ -148,7 +147,7 @@ public class Verifier extends JFrame {
 		bdayLabel.setHorizontalTextPosition(SwingConstants.CENTER);
 		bdayLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		bdayLabel.setForeground(Color.WHITE);
-		bdayLabel.setFont(new Font("Agency FB", Font.PLAIN, 17));
+		bdayLabel.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		bdayLabel.setBounds(130, 129, 67, 20);
 		contentPane.add(bdayLabel);
 		
@@ -165,7 +164,7 @@ public class Verifier extends JFrame {
 		
 		JLabel anskeyLabel = new JLabel("Answer Key : ");
 		anskeyLabel.setForeground(Color.WHITE);
-		anskeyLabel.setFont(new Font("Agency FB", Font.PLAIN, 17));
+		anskeyLabel.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		anskeyLabel.setBounds(131, 184, 78, 20);
 		contentPane.add(anskeyLabel);
 		
@@ -204,7 +203,7 @@ public class Verifier extends JFrame {
 			//ESTABLISHING CONNECTION TO THE DATABSE
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
+					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 					
 				    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 				    String date = sdf.format(dateChooser.getDate());
@@ -213,7 +212,7 @@ public class Verifier extends JFrame {
 				    String anskey = anskeyTextfield.getText();
 				    
 				    Statement state = con.createStatement();
-				    String sql = "select * from infosbs where AccountNumber='"+accountnum+"' and  Birthday ='"+date+"' and AnswerKey = '"+anskey+"'";
+				    String sql = "select * from userinfos where AccountNumber='"+accountnum+"' and  Birthday ='"+date+"' and AnswerKey = '"+anskey+"'";
 					ResultSet rs = state.executeQuery(sql);
 					
 					// IN THIS PART THE PROGRAM WILL ASK THE 3 INFORMATION CAME FROM THE USER AND IT WILL VALIDATE 
@@ -280,11 +279,11 @@ public class Verifier extends JFrame {
 	 show.setHorizontalAlignment(SwingConstants.LEFT);
 	 show.setFont(new Font("SansSerif", Font.PLAIN, 11));
 	 show.setForeground(Color.WHITE);
-		show.setBounds(217, 160, 176, 17);
+		show.setBounds(230, 159, 176, 17);
 		contentPane.add(show);
 		
 		JLabel SecretQLabel = new JLabel("Secret Question :");
-		SecretQLabel.setFont(new Font("Agency FB", Font.PLAIN, 17));
+		SecretQLabel.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		SecretQLabel.setForeground(Color.WHITE);
 		SecretQLabel.setBounds(131, 159, 98, 14);
 		contentPane.add(SecretQLabel);
@@ -302,10 +301,10 @@ public class Verifier extends JFrame {
 				// ESTABLISH A CONNECTION TO THE SQL DATABASE
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
+					Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 					 Statement statement = con1.createStatement();
 				     accountnum = accountTextfield.getText();
-					 String see = "select * from infosbs where AccountNumber='"+accountnum+"'";
+					 String see = "select * from userinfos where AccountNumber='"+accountnum+"'";
 					ResultSet res = statement.executeQuery(see);
 		
 					// IN THIS PART THE PROGRAM WILL CHECK IF THE ACCOUNTNUMBER THAT THE USER INPUT IS VALID

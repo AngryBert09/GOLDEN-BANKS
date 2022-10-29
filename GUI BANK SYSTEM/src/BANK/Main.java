@@ -179,13 +179,13 @@ public class Main extends JFrame {
 					 // WE ESTABLISH A CONNECTION HERE TO THE DATABASE
 					
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/userinfos","root","tuto123");
+					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 						
 				       accountnum = accountTextfield.getText();
 					   pin = pinPassField.getText();
 					
 						Statement state = con.createStatement();
-						String sql = "select * from infosbs where AccountNumber='"+accountnum+"' and  Pin ='"+pin+"'";
+						String sql = "select * from userinfos where AccountNumber='"+accountnum+"' and  Pin ='"+pin+"'";
 					     ResultSet rs = state.executeQuery(sql);
 				
 						

@@ -211,14 +211,9 @@ public class sendMoney extends JFrame {
 			    		   }else if(accountnum != rs.getString("AccountNumber")) {
 			    			   
 			    			   // Check if the input account number is valid
-			    				int count = 0;
-				    			count++;
-				    			
-				    			if(count > 1) {
-				    				getFrame().dispose();
-				    			}
 			    			   
 			    			JOptionPane.showMessageDialog(null, "INVALID ACCOUNTNUMBER");
+			    			
 			    		
 			    		   
 			    
@@ -286,7 +281,7 @@ public class sendMoney extends JFrame {
 			public void mouseReleased(MouseEvent e) {
 				Homepage home = new Homepage();
 				try {
-					Class.forName("com.mysql.cj.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				
 			    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdatabase","GoldenBank","tuto123");
 			    state = con.createStatement();
